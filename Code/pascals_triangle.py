@@ -10,3 +10,16 @@ class Solution:
                 res = res * i  
             return res    
         result=[]
+        for i in range(1,numRows+1):
+            if i==1:
+                result.append([1])
+            elif i==2:
+                result.append([1,1])
+            elif i>=3:
+                arr=[]
+                for j in range(1,i+1):
+                    ele=int(nCr(i-1,j-1))
+                    arr=arr+[int(ele)]
+                result.append(arr)
+        return result                    
+            
